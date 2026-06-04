@@ -48,13 +48,13 @@ export default function AdminPanel()
             image: ''
             }
         )
-        window.location.reload() // refresh display after adding record
+         // refresh display after adding record
     }
 
     // Delete Record
     const deleteRecord = async (id) => {
         await supabase.from('spc').delete().eq('id', id)
-        window.location.reload()
+        
     }
 
 
@@ -68,7 +68,7 @@ export default function AdminPanel()
     {
         await supabase.from('spc').update(editRecord).eq('id', id)
         setEditRecord(null) // clear the state after saving
-        window.location.reload()
+        
     }
 
 return(
